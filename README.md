@@ -11,6 +11,11 @@ You must have Docker installed. [Download](https://www.docker.com/community-edit
 docker build -t sonarwhal .
 ```
 
+### Testing
+```bash
+docker runsonarwhal
+```
+
 ### Pull
 ```bash
 docker pull willfarrell/sonarwhal
