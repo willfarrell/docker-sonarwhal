@@ -1,7 +1,7 @@
-# Cannot use alpine due to `canvas-prebuilt` is based off glibc
 FROM node:10-alpine
 
 # Start glibc - https://hub.docker.com/r/frolvlad/alpine-glibc/~/dockerfile/
+# Required due too `canvas-prebuilt` is based off glibc
 ENV LANG=C.UTF-8
 
 # Here we install GNU libc (aka glibc) and set C.UTF-8 locale as default.
