@@ -1,0 +1,7 @@
+{
+  "name": "sonarwhal",
+  "version": "1.11.2",
+  "dependencies": {
+    "sonarwhal": "1.11.2"
+  }
+}
