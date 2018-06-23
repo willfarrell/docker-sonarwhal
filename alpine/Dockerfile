@@ -40,6 +40,7 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
 
 WORKDIR /var/www
 
+# Work around: https://github.com/sonarwhal/sonarwhal/issues/600#issuecomment-339981842
 RUN apk update && \
     apk upgrade && \
     npm i -g --engine-strict sonarwhal@1.11.2 --unsafe-perm=true && \
