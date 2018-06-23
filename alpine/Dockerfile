@@ -2,8 +2,8 @@
 FROM node:9.11-alpine
 RUN apk update && \
     apk upgrade && \
-    npm install -g --engine-strict sonarwhal --unsafe-perm=true && \
-    yes "" | npx sonarwhal --init
+    npm i -g --engine-strict sonarwhal@1.11.2 --unsafe-perm=true && \
+    yes "" | sonarwhal --init
 
 ENTRYPOINT ["sonarwhal"]
 CMD ["-h"]
