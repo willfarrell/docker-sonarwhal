@@ -6,7 +6,7 @@ WORKDIR /var/www
 RUN apt-get update && \
     apt-get install -y curl apt-transport-https && \
     npm i -g --engine-strict sonarwhal@1.11.2 --unsafe-perm=true && \
-    echo '{ "extends": [ "web-recommended" ] }' > .sonarwhal
+    echo '{ "extends": [ "web-recommended" ] }' > .sonarwhalrc
     #yes "" | sonarwhal --init
 
 ENTRYPOINT ["sonarwhal"]
