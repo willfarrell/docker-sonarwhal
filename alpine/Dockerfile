@@ -44,7 +44,8 @@ WORKDIR /var/www
 RUN apk update && \
     apk upgrade && \
     npm i -g --engine-strict sonarwhal@1.11.2 --unsafe-perm=true && \
-    yes "" | sonarwhal --init
+    echo '{ "extends": [ "web-recommended" ] }' > .sonarwhal
+    #yes "" | sonarwhal --init
 
 ENTRYPOINT ["sonarwhal"]
 CMD ["-h"]
