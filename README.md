@@ -1,5 +1,5 @@
 # sonarwhal
-docker image for sonarwhal
+docker image for sonarwhal. Uses `{ "extends": [ "web-recommended" ], "formatters": [ "json" ] }` by default but can be over written in `var/www`.
 
 ## Supported tags and Dockerfile links
 - [`latest` (*Dockerfile*)](https://github.com/willfarrell/docker-sonarwhal/blob/master/jessie/Dockerfile)

@@ -1,5 +1,7 @@
 FROM node:10-alpine
 
+ENV VERSION=1.11.2
+
 # Start glibc - https://hub.docker.com/r/frolvlad/alpine-glibc/~/dockerfile/
 # Required due too `canvas-prebuilt` is based off glibc
 ENV LANG=C.UTF-8
@@ -43,9 +45,9 @@ WORKDIR /var/www
 # Work around: https://github.com/sonarwhal/sonarwhal/issues/600#issuecomment-339981842
 RUN apk update && \
     apk upgrade && \
-    npm i -g --engine-strict sonarwhal@1.11.2 --unsafe-perm=true && \
-    echo '{ "extends": [ "web-recommended" ] }' > .sonarwhalrc
-    #yes "" | sonarwhal --init
+    npm i -g --engine-strict sonarwhal@${VERSION} --unsafe-perm=true && \
+    npm i -g @sonarwhal/configuration-web-recommended @sonarwhal/formatter-json && \
+    echo '{ "extends": [ "web-recommended" ], "formatters": [ "json" ] }' > .sonarwhalrc
 
 ENTRYPOINT ["sonarwhal"]
 CMD ["-h"]
