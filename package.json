@@ -1,7 +1,7 @@
 {
-  "name": "sonarwhal",
-  "version": "1.11.2",
+  "name": "webhint",
+  "version": "3.2.0",
   "dependencies": {
-    "sonarwhal": "1.11.2"
+    "hint": "3.2.0"
   }
 }
