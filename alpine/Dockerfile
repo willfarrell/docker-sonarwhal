@@ -1,6 +1,6 @@
 FROM node:10-alpine
 
-ENV VERSION=1.11.2
+ENV VERSION=3.2.0
 
 # Start glibc - https://hub.docker.com/r/frolvlad/alpine-glibc/~/dockerfile/
 # Required due too `canvas-prebuilt` is based off glibc
@@ -42,13 +42,13 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
 
 WORKDIR /var/www
 
-# Work around: https://github.com/sonarwhal/sonarwhal/issues/600#issuecomment-339981842
+# Work around: https://github.com/webhintio/hint/issues/600#issuecomment-339981842
 RUN apk update && \
     apk upgrade && \
-    npm i -g --engine-strict sonarwhal@${VERSION} --unsafe-perm=true && \
-    npm i -g @sonarwhal/configuration-web-recommended @sonarwhal/formatter-json && \
-    echo '{ "extends": [ "web-recommended" ], "formatters": [ "json" ] }' > .sonarwhalrc
+    npm i -g --engine-strict hint@${VERSION} --unsafe-perm=true && \
+    npm i -g @hint/configuration-web-recommended @hint/formatter-json && \
+    echo '{ "extends": [ "web-recommended" ], "formatters": [ "json" ] }' > .hintrc
 
-ENTRYPOINT ["sonarwhal"]
+ENTRYPOINT ["hint"]
 CMD ["-h"]
 

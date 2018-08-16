@@ -1,14 +1,14 @@
-# sonarwhal
-docker image for sonarwhal. Uses `{ "extends": [ "web-recommended" ], "formatters": [ "json" ] }` by default but can be over written in `var/www`.
+# webhint
+docker image for webhint. Uses `{ "extends": [ "web-recommended" ], "formatters": [ "json" ] }` by default but can be over written in `var/www`.
 
 ## Supported tags and Dockerfile links
-- [`latest` (*Dockerfile*)](https://github.com/willfarrell/docker-sonarwhal/blob/master/jessie/Dockerfile)
-- [`alpine` (*Dockerfile*)](https://github.com/willfarrell/docker-sonarwhal/blob/master/alpine/Dockerfile)
+- [`latest` (*Dockerfile*)](https://github.com/willfarrell/docker-webhint/blob/master/jessie/Dockerfile)
+- [`alpine` (*Dockerfile*)](https://github.com/willfarrell/docker-webhint/blob/master/alpine/Dockerfile)
 
-- [`1.11.2` (*Dockerfile*)](https://github.com/willfarrell/docker-sonarwhal/blob/1.11.2/jessie/Dockerfile)
-- [`1.11.2-alpine` (*Dockerfile*)](https://github.com/willfarrell/docker-sonarwhal/blob/1.11.2/alpine/Dockerfile)
+- [`1.11.2` (*Dockerfile*)](https://github.com/willfarrell/docker-webhint/blob/1.11.2/jessie/Dockerfile)
+- [`1.11.2-alpine` (*Dockerfile*)](https://github.com/willfarrell/docker-webhint/blob/1.11.2/alpine/Dockerfile)
 
-[![](https://images.microbadger.com/badges/version/willfarrell/sonarwhal.svg)](http://microbadger.com/images/willfarrell/sonarwhal "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/willfarrell/sonarwhal.svg)](http://microbadger.com/images/willfarrell/sonarwhal "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/willfarrell/webhint.svg)](http://microbadger.com/images/willfarrell/webhint "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/willfarrell/webhint.svg)](http://microbadger.com/images/willfarrell/webhint "Get your own image badge on microbadger.com")
 
 
 ## Getting Started
@@ -18,24 +18,24 @@ You must have Docker installed. [Download](https://www.docker.com/community-edit
 
 ### Build
 ```bash
-docker build -t sonarwhal .
+docker build -t webhint .
 ```
 
 ### Testing
 ```bash
-docker runsonarwhal
+docker run webhint
 ```
 
 ### Pull
 ```bash
-docker pull willfarrell/sonarwhal
+docker pull willfarrell/webhint
 ```
 
 ## Deployment
 ```bash
-docker run willfarrell/sonarwhal https://example.com
+docker run willfarrell/webhint https://example.com
 ```
 
 ## Built With
-- [sonarwhal](https://sonarwhal.com)
+- [webhint](https://webhint.io)
 - [Docker](https://www.docker.com)
